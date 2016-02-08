@@ -3,7 +3,7 @@ if(!file.exists("./household_power_consumption.txt")){
 download.file(url="https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip",destfile="pdata2.zip",method="curl")
 unzip("pdata2.zip")
 }
-#read dataset
+##read dataset
 gdata<-read.table("household_power_consumption.txt",header=TRUE,sep=";")
 #parse to numeric current characters columns
 gdata$Global_active_power<-as.numeric(levels(gdata$Global_active_power)[gdata$Global_active_power])
